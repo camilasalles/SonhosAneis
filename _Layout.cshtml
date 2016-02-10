@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div id="Background">
+        <div id="Body">
+            <header>
+                <nav id="TopBar">
+                    <div class="TopBarTab" id="TopBarSearch">TopBarSearch</div>
+                    <div class="TopBarTab" id="TopBarLogin">TopBarLogin</div>
+                    <div class="TopBarTab" id="TopBarCart">TopBarCart</div>
+                </nav>
+                <div class="clear-fix"></div>
+                <section id="LogoSocial">
+                    <div id="Logo"></div>
+                    <div id="Social">
+                        <img src="~/Images/HEADER_SOCIAL_FACEBOOK.png" />
+                        <img src="~/Images/HEADER_SOCIAL_G.png" />
+                        <img src="~/Images/HEADER_SOCIAL_INSTAGRAM.png" />
+                        <img src="~/Images/HEADER_SOCIAL_PINTEREST.png" />
+                    </div>
+                </section>
+            </header>
+            <div class="clear-fix"></div>
+            <div id="Content">
+                <nav id="InfoBar">
+                    <div id="InfoBarLinks">InfoBar</div>
+                </nav>
+                <article>
+                    <div id="VariableContent">
+                        @RenderBody()
+
+
+                        @Scripts.Render("~/bundles/jquery")
+                        @RenderSection("scripts", required: false)
+                    </div>
+                </article>
+                <aside>
+                    <ul class="UnorderedList" id="AsideUl">
+                        <li>ANÉIS</li>
+                        <li>BRINCOS</li>
+                        <li>COLARES</li>
+                        <li>PULSEIRAS</li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="clear-fix"></div>
+            <div id="ContentGradientBottom"></div>
+            <footer>
+                <nav class="FooterTab" id="FooterCategories">FooterCategories</nav>
+                <div class="FooterTab" id="FooterLogo"><img src="~/Images/FOOTER_LOGO.png" /></div>
+                <div class="FooterTab" id="FooterSocial">
+                    <img src="~/Images/FOOTER_SOCIAL_FACEBOOK.png" />
+                    <img src="~/Images/FOOTER_SOCIAL_G.png" />
+                    <img src="~/Images/FOOTER_SOCIAL_INSTAGRAM.png" />
+                    <img src="~/Images/FOOTER_SOCIAL_PINTEREST.png" />
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+</html>
